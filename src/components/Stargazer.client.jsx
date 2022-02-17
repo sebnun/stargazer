@@ -1,6 +1,7 @@
-import { useState } from "react";
+import { Suspense, useState } from "react";
 import Button from "./Button.client";
 import repos from "../model/repos";
+import Repo from "./Repo.jsx";
 
 const Stargazer = () => {
   // Maybe a debounce function, or some sort of caching is needed to avoid making a request on every click
@@ -10,6 +11,7 @@ const Stargazer = () => {
 
   return (
     <div>
+      <div className="counter">
       <Button
         onClickHandler={() =>
           setCount(count === 0 ? repos.length - 1 : (count -= 1))
@@ -17,9 +19,7 @@ const Stargazer = () => {
       >
         - DECREMENT
       </Button>
-
       <p>Counter: {count}</p>
-
       <Button
         onClickHandler={() =>
           setCount(count === repos.length - 1 ? 0 : (count += 1))
@@ -28,6 +28,13 @@ const Stargazer = () => {
       >
         + INCREMENT
       </Button>
+      </div>
+
+      {/* 
+        {/* Ideally we would use an Error Boundary here, for a more idiomatic React 
+        but getDerivedStateFromError it's not supported in RSCs */}
+        <Repo repo={repos[count]} />
+     {/* </Suspense>  */}
 
       <style global jsx>{`
         body {
@@ -41,12 +48,12 @@ const Stargazer = () => {
       `}</style>
 
       <style jsx>{`
-        div {
+        div.counter {
           display: flex;
           justify-content: space-between;
         }
 
-        div p {
+        div.counter p {
           margin-left: 2rem;
           margin-right: 2rem;
         }

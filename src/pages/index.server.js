@@ -1,10 +1,9 @@
+import Stargazer from "../components/Stargazer.client";
 
 export default function Home() {
   return (
-    <div>
-      <main>
-        <p>hey</p>
-      </main>
-    </div>
-  )
+    <main>
+      <Stargazer />
+    </main>
+  );
 }

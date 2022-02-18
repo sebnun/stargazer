@@ -1,6 +1,6 @@
 import useRepo from "../utils/useRepo";
 
-const InfoBox = ({title, description }) => {
+const InfoBox = ({ title, description }) => {
   return (
     <div>
       <h1>{title}</h1>
@@ -33,8 +33,6 @@ const Repo = ({ repoId }) => {
         description={repo.message}
       />
     );
-
-  // console.log(repo, isLoading, isError);
 
   return (
     <InfoBox

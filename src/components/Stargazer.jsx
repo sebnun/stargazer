@@ -33,10 +33,6 @@ const Stargazer = () => {
       <Repo repoId={repos[count]} />
 
       <style jsx>{`
-
-        div.container {
-        }
-
         div.counter {
           display: flex;
           justify-content: space-around;

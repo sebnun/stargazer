@@ -2,8 +2,8 @@ import Stargazer from "../components/Stargazer";
 
 export default function Home() {
   return (
-    <main> 
-      <Stargazer /> 
+    <main>
+      <Stargazer />
       <style global jsx>{`
         body {
           font-family: Arial, Helvetica, sans-serif;

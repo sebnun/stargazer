@@ -43,4 +43,4 @@ const Button = ({ isPrimary, onClickHandler, children }) => (
   </button>
 );
 
-export default Button
+export default Button;

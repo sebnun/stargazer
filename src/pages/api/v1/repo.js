@@ -9,7 +9,7 @@ export default function handler(req, res) {
     .then((r) => r.json())
     .then((json) => res.status(200).json(json))
     .catch((e) => {
-      console.error(e); 
+      console.error(e);
       res.status(500).json({ error: "Something wrong happened fetching :(" });
     });
 }

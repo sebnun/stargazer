@@ -1,5 +1,5 @@
 import { Suspense, useState } from "react";
-import Button from "./Button.client";
+import Button from "./Button";
 import repos from "../model/repos";
 import Repo from "./Repo.jsx";
 

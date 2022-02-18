@@ -1,4 +1,4 @@
-import Stargazer from "../components/Stargazer.client";
+import Stargazer from "../components/Stargazer";
 
 export default function Home() {
   return (

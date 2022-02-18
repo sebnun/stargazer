@@ -1,4 +1,4 @@
-// On a more complex app we would import a 'reset' list of CSS styles
+// On a more complex app we would import a app-wide 'reset' list of CSS styles
 
 const Button = ({ isPrimary, onClickHandler, children }) => (
   <button onClick={onClickHandler} className={isPrimary && "primary"}>

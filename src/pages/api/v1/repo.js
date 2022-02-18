@@ -2,8 +2,8 @@
 // But just wanted to show a basic server - client architecture
 
 export default function handler(req, res) {
-  const { repo } = req.body;
-  const endpoint = `https://api.github.com/repos/${repo}`;
+  const { id } = req.query;
+  const endpoint = `https://api.github.com/repos/${id}`;
 
   fetch(endpoint)
     .then((r) => r.json())

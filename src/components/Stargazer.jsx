@@ -7,8 +7,6 @@ const Stargazer = () => {
   // Maybe a debounce function, is needed to avoid making a request on every click
   const [count, setCount] = useState(0);
 
-  console.log(count);
-
   return (
     <div className="container">
       <div className="counter">

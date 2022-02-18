@@ -5,7 +5,7 @@ export default function handler(req, res) {
   const { id } = req.query;
   const endpoint = `https://api.github.com/repos/${id}`;
 
-  fetch(endpoint)
+  return fetch(endpoint)
     .then((r) => r.json())
     .then((json) => res.status(200).json(json))
     .catch((e) => {

@@ -10,36 +10,36 @@ const Stargazer = () => {
   console.log(count);
 
   return (
-    <div>
+    <div className="container">
       <div className="counter">
-      <Button
-        onClickHandler={() =>
-          setCount(count === 0 ? repos.length - 1 : (count -= 1))
-        }
-      >
-        - DECREMENT
-      </Button>
-      <p>Counter: {count}</p>
-      <Button
-        onClickHandler={() =>
-          setCount(count === repos.length - 1 ? 0 : (count += 1))
-        }
-        isPrimary
-      >
-        + INCREMENT
-      </Button>
+        <Button
+          onClickHandler={() =>
+            setCount(count === 0 ? repos.length - 1 : (count -= 1))
+          }
+        >
+          - DECREMENT
+        </Button>
+        <p>Counter: {count}</p>
+        <Button
+          onClickHandler={() =>
+            setCount(count === repos.length - 1 ? 0 : (count += 1))
+          }
+          isPrimary
+        >
+          + INCREMENT
+        </Button>
       </div>
 
-
-        {/* <Repo repo={repos[count]} /> */}
-     
-
-
+      <Repo repoId={repos[count]} />
 
       <style jsx>{`
+
+        div.container {
+        }
+
         div.counter {
           display: flex;
-          justify-content: space-between;
+          justify-content: space-around;
         }
 
         div.counter p {

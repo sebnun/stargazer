@@ -11,6 +11,7 @@ export default function Home() {
           align-items: center;
           justify-content: center;
           margin: 0px;
+          padding: 0px;
           height: 100vh;
         }
       `}</style>
